@@ -42,7 +42,7 @@ This application implements a cinema service model with the ability to register 
 - **Javax annotation** `v.1.3.2`
 - **Tomcat** `v.9.0.65`
 # How to run
-- Clone this repositoty.
+- Clone this repositoty `https://github.com/VitaliiPotseluiko/cinema-app.git`.
 - Install MySQL.
 - Use `init_db.sql` file for creating your local database.
 - In `db.properties` replace the values of the YOUR_DRIVER, YOUR_DATABASE_URL, YOUR_ROOT, YOUR_PASSWORD and YOUR_DIALECT properties with the appropriate values for your database setup
