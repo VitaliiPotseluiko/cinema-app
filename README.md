@@ -27,6 +27,7 @@ This application implements a cinema service model with the ability to register 
 - `model`: classes which represent data models
 - `service`: interfaces and their implementations that perform business logic
 - `util`: utility class is used in a project to pattern date
+
 ![](https://github.com/VitaliiPotseluiko/hibernate-shopping-cart-hw/blob/master/Hibernate_Cinema_Uml.png)
 
 # Technologies
