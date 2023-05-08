@@ -1,8 +1,27 @@
 ﻿# Cinema-App
 This application implements a cinema service model with the ability to register and authenticate user, control access to various data. Booking service based on Hibernate and Spring frameworks using general REST principles.
+
 # Features
-#Technologies
-- **Java** `v.17.0.5`
+- it takes to login before using
+- every user has roles: `USER` and `ADMIN`
+  - with Andmin role you can:
+      - register new users
+      - see all users
+      - can add and get movies
+      - can add and get cinema hall
+      - can add, update, delete and get movie session
+  - with User role you can:
+      - register new users
+      - add session to his own shopping cart and get it shopping cart
+      - complete him order and get him orders history
+      - get movies
+      - get cinema hall
+      - get movie session
+# Model structure
+![](https://github.com/VitaliiPotseluiko/hibernate-shopping-cart-hw/blob/master/Hibernate_Cinema_Uml.png)
+
+# Technologies
+- **Java** `v.17.0.3.1`
 - **Maven** `v.3.8.7`
 - **Spring** `v.5.3.20`
 - **Spring Security** `v.5.6.10`
