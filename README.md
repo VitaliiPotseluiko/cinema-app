@@ -17,7 +17,16 @@ This application implements a cinema service model with the ability to register 
       - get movies
       - get cinema hall
       - get movie session
-# Model structure
+# Structure
+- `config`: classes for configuration of application
+- `controller`: servlets which handle http-request and http-response
+- `dao`: Data Access Object interfaces and their implementations
+- `dto`: classes for data transpontation from DB
+- `exception`: custom exceptions for working with the database
+- `lib`: custom annotations for data validation
+- `model`: classes which represent data models
+- `service`: interfaces and their implementations that perform business logic
+- `util`: utility class is used in a project to pattern date
 ![](https://github.com/VitaliiPotseluiko/hibernate-shopping-cart-hw/blob/master/Hibernate_Cinema_Uml.png)
 
 # Technologies
