@@ -27,19 +27,21 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
     protected void configure(HttpSecurity http) throws Exception {
         http
                 .authorizeRequests()
-                .antMatchers(HttpMethod.POST, "/register/*").permitAll()
-                .antMatchers(HttpMethod.POST, "/cinema-halls/*").hasRole("ADMIN")
-                .antMatchers(HttpMethod.GET, "/cinema-halls/*").hasAnyRole("ADMIN", "USER")
-                .antMatchers(HttpMethod.GET, "/movies/*").hasAnyRole("ADMIN", "USER")
-                .antMatchers(HttpMethod.POST, "/movies/*").hasRole("ADMIN")
-                .antMatchers(HttpMethod.GET, "/movies-sessions/available/*").hasAnyRole(
-                        "ADMIN", "USER")
-                .antMatchers("/movies-sessions/*").hasRole("ADMIN")
-                .antMatchers(HttpMethod.GET, "/orders/*").hasRole("USER")
-                .antMatchers(HttpMethod.POST, "/orders/complete/*").hasRole("USER")
-                .antMatchers(HttpMethod.PUT, "/shopping-carts/movie-sessions/*").hasRole("USER")
-                .antMatchers(HttpMethod.GET, "/shopping-carts/by-user/*").hasRole("USER")
-                .antMatchers(HttpMethod.GET, "/users/by-email/*").hasRole("ADMIN")
+                .antMatchers(HttpMethod.POST, "/register").permitAll()
+                .antMatchers(HttpMethod.POST,
+                        "/cinema-halls",
+                        "/movies",
+                        "/movie-sessions").hasRole("ADMIN")
+                .antMatchers(HttpMethod.GET,
+                        "/cinema-halls",
+                        "/movies",
+                        "/movies-sessions/available").hasAnyRole("ADMIN", "USER")
+                .antMatchers(HttpMethod.GET,
+                        "/shopping-carts/by-user",
+                        "/orders").hasRole("USER")
+                .antMatchers(HttpMethod.POST, "/orders/complete").hasRole("USER")
+                .antMatchers(HttpMethod.PUT, "/shopping-carts/movie-sessions/{id}").hasRole("USER")
+                .antMatchers(HttpMethod.GET, "/users/by-email").hasRole("ADMIN")
                 .anyRequest().authenticated()
                 .and()
                 .formLogin()
