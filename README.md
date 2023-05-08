@@ -47,3 +47,5 @@ This application implements a cinema service model with the ability to register 
 - In `db.properties` replace the values of the YOUR_DRIVER, YOUR_DATABASE_URL, YOUR_ROOT, YOUR_PASSWORD and YOUR_DIALECT properties with the appropriate values for your database setup
 - Build the project using Maven: `mvn clean install`
 - Deploy the generated WAR file to servlet container such as Tomcat
+# Autors
+Vitalii Potseluiko
